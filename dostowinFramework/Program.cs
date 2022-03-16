@@ -8,11 +8,13 @@ namespace dostowinFramework
 {
     class Program
     {
+        //Developed by Onohov Aleksey 
+        //https://github.com/Onokin/DosToWinConverter
         static void Main(string[] args)
         {
             try
             {
-                string path = args[0];//@"C:\Users\Sacris\source\repos\dostowinFramework\dostowinFramework\bin\Debug\KART.txt";//
+                string path = args[0];
                 var win1251 = Encoding.GetEncoding(1251);
                 var dos866 = Encoding.GetEncoding(866);
                 var lines = File.ReadAllLines(path, win1251);
@@ -31,6 +33,7 @@ namespace dostowinFramework
             {
                 Console.WriteLine(ex.Message);
                 Console.WriteLine(ex.InnerException);
+                Console.WriteLine("Error! \nОшибка!");
                 Console.ReadLine();
             }
         }
